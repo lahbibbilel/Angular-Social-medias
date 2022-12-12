@@ -14,6 +14,10 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ErrorComponent } from './error/error.component';
+import { PageAccueilComponent } from './page-accueil/page-accueil.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { PopUpComponent } from './pop-up/pop-up.component';
+
 
 
 
@@ -26,7 +30,9 @@ import { ErrorComponent } from './error/error.component';
     HeaderComponent,
     FooterComponent,
     ContactUsComponent,
-    ErrorComponent
+    ErrorComponent,
+    PageAccueilComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,9 @@ import { ErrorComponent } from './error/error.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="page-accueil.component.css" />
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <style>
+    input[type=text] {
+      width: 100%;
+      padding: 10px 15px;
+      margin: 5px 0;
+      box-sizing: border-box;
+      background-color: rgb(255, 255, 128);    }
+    .jqbox_innerhtml {
+      position: fixed;
+      width: 500px;
+      height: 200px;
+      margin: 5% auto;
+      padding: 10px;
+      border: 5px solid #ccc;
+      background-color: #fff;
+    }
+  </style>
+
+</head>
+<body>
+<div class="container">
+  <nav>
+    <ul>
+      <li><a href="#" class="logo">
+        <img src="">
+        <span class="nav-item">Utilisateur</span>
+      </a></li>
+      <li><a href="/accueil">
+        <i class="fas fa-menorah"></i>
+        <span class="nav-item">Dashboard</span>
+      </a></li>
+      <li><a href="/messagerie">
+        <i class="fas fa-comment"></i>
+        <span class="nav-item">Message</span>
+      </a></li>
+
+
+    </ul>
+  </nav>
+
+
+  <section class="main">
+    <div class="main-top">
+      <h6>publications :</h6>
+
+    </div>
+    <div class="users">
+      <div class="card">
+        <input type="text" name="nom">
+        <input type="text" name="description">
+        <input type="text" name="url">
+        <div class="per">
+          <table>
+            <tr>
+              <td>
+                <button type="button" class="btn btn-warning">send</button>
+
+              </td>
+              <td>  <button onclick="dialog.showModal()">Open-pub</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <section>
+      <dialog id="dialog" class="jqbox_innerhtml">
+        <form method="dialog">
+          <div class="row">
+              <div class="card">
+                pub:
+                <input type="text" name="nom">
+                <input type="text" name="description">
+                <input type="text" name="url">
+              </div>
+            <div class="card">
+              pub:
+              <input type="text" name="nom">
+              <input type="text" name="description">
+              <input type="text" name="url">
+            </div>
+            <div class="card">
+              pub:
+              <input type="text" name="nom">
+              <input type="text" name="description">
+              <input type="text" name="url">
+            </div>
+            </div>
+
+          <button>OK</button>
+        </form>
+      </dialog>
+      </section>
+    </div>
+
+
+
+
+
+
+
+
+
+    <section class="main">
+      <div class="main-top">
+        <h6>comments :</h6>
+      </div>
+      <div class="users">
+        <div class="card">
+    <textarea cols="60" rows="5" style="background-color: rgb(255, 255, 128);">
+  </textarea>
+          <div class="per">
+            <table>
+              <tr>
+                <td>
+                  <button type="button" class="btn btn-warning">send</button>
+
+                </td>
+
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+</div>
+
+</body>
+</html>
