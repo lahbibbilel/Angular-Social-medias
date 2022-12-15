@@ -28,17 +28,27 @@
 <div class="container">
   <nav>
     <ul>
-      <li><a href="#" class="logo">
-        <img src="">
-        <span class="nav-item">Utilisateur</span>
-      </a></li>
-      <li><a href="/accueil">
-        <i class="fas fa-menorah"></i>
-        <span class="nav-item">Dashboard</span>
-      </a></li>
+      <li >
+        <a href="/accueil" class="logo">
+        <img src="../../../assets/images/hh.jpg">
+        <span class="nav-item">
+         <tr *ngFor="let item of allUsers">
+        <td>{{ item.name }} {{ item.lastName }}</td>
+      </tr>
+             <tr *ngFor="let item of allpub">
+        <td>{{ item.subject }} {{ item.content }}</td>
+             </tr>
+        </span>
+      </a>
+      </li>
+
       <li><a href="/messagerie">
         <i class="fas fa-comment"></i>
-        <span class="nav-item">Message</span>
+        <span class="nav-item">Messanger</span>
+      </a></li>
+      <li><a href="/login">
+        <i class="fas fa-window-close"></i>
+        <span class="nav-item">logOut</span>
       </a></li>
 
 
@@ -51,16 +61,24 @@
       <h6>publications :</h6>
 
     </div>
-    <div class="users">
+    <div class="users" >
       <div class="card">
-        <input type="text" name="nom">
-        <input type="text" name="description">
-        <input type="text" name="url">
+        <form>
+          <div class="mb-3">
+            <input placeholder="subject" type="text" name="subject" [(ngModel)] = "pubForm.subject" class="form-control" id="txtsubject" />
+          </div>
+          <div class="mb-3">
+            <input placeholder="content" type="text" name="content" [(ngModel)] = "pubForm.content" class="form-control" id="txtcontent" />
+          </div>
+          <div class="mb-3">
+            <input placeholder="sendTo" type="text" name="destTo" [(ngModel)] = "pubForm.destTo" class="form-control" id="txtdestTo" />
+          </div>
+          <button type="reset" (click)="create()" class="btn btn-primary">Create</button>
+        </form>
         <div class="per">
           <table>
             <tr>
               <td>
-                <button type="button" class="btn btn-warning">send</button>
 
               </td>
               <td>  <button onclick="dialog.showModal()">Open-pub</button>
@@ -73,24 +91,13 @@
       <dialog id="dialog" class="jqbox_innerhtml">
         <form method="dialog">
           <div class="row">
-              <div class="card">
+              <div  >
                 pub:
                 <input type="text" name="nom">
                 <input type="text" name="description">
                 <input type="text" name="url">
               </div>
-            <div class="card">
-              pub:
-              <input type="text" name="nom">
-              <input type="text" name="description">
-              <input type="text" name="url">
-            </div>
-            <div class="card">
-              pub:
-              <input type="text" name="nom">
-              <input type="text" name="description">
-              <input type="text" name="url">
-            </div>
+
             </div>
 
           <button>OK</button>

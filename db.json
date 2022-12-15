@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "bilel",
+      "lastName": "lahbib",
+      "image": "src/assets/images/hh.jpg"
+    }
+  ],
+  "pub": {
+    "id": 0,
+    "content": null,
+    "subject": null,
+    "destTo": null
+  }
+}
